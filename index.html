@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Mutual Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Instagram Mutual Checker</h1>
+        <p>
+            Sube tus archivos exportados de seguidores y seguidos para comparar quiénes te siguen mutuamente y quiénes
+            no.
+        </p>
+        <a href="guia.html">Guía de Uso</a>
+
+
+        <div class="upload-section">
+            <label for="followersFile">Archivo de seguidores:</label>
+            <input type="file" id="followersFile" accept=".json">
+
+            <label for="followingFile">Archivo de seguidos:</label>
+            <input type="file" id="followingFile" accept=".json">
+
+            <button id="compareBtn">Comparar</button>
+        </div>
+
+        <div class="results">
+            <h2>Resultados</h2>
+
+            <div class="result-box">
+                <h3>Mutuos</h3>
+                <ul id="mutualList"></ul>
+            </div>
+
+            <div class="result-box">
+                <h3>No te siguen</h3>
+                <ul id="notFollowingBackList"></ul>
+            </div>
+
+            <div class="result-box">
+                <h3>No sigues</h3>
+                <ul id="fansList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
